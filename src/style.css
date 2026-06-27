@@ -597,35 +597,6 @@ h3 {
   transform: scale(1.035);
 }
 
-.safety {
-  display: grid;
-  grid-template-columns: 1fr 0.9fr;
-  gap: 48px;
-  align-items: start;
-  border-block: 1px solid var(--line);
-}
-
-.safety-points {
-  display: grid;
-  gap: 14px;
-}
-
-.safety-points p {
-  border-left: 4px solid var(--accent);
-  padding: 12px 0 12px 18px;
-  background: linear-gradient(90deg, rgba(242, 111, 94, 0.12), transparent);
-}
-
-.trust-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  padding-top: 6px;
-  color: var(--brand-dark);
-  font-size: 0.9rem;
-  font-weight: 800;
-}
-
 .contact {
   display: grid;
   justify-items: start;
@@ -719,7 +690,6 @@ h3 {
   }
 
   .intro,
-  .safety,
   .feature-grid,
   .activity-grid,
   .steps {

@@ -76,10 +76,10 @@ copyButton?.addEventListener("click", async () => {
       selection.removeAllRanges();
     }
   }
-  copyButton.textContent = "Copied!";
+  copyButton.textContent = "Đã sao chép!";
   copyButton.classList.add("is-copied");
   setTimeout(() => {
-    copyButton.textContent = "Copy";
+    copyButton.textContent = "Sao chép";
     copyButton.classList.remove("is-copied");
   }, 1600);
 });
