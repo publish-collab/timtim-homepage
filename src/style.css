@@ -524,6 +524,108 @@ h3 {
   background: linear-gradient(180deg, transparent, rgba(238, 246, 245, 0.45));
 }
 
+.active-dates {
+  border-top: 1px solid var(--line);
+}
+
+.activity-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
+  grid-template-rows: repeat(2, minmax(240px, 1fr));
+  gap: 18px;
+}
+
+.activity-card {
+  position: relative;
+  min-height: 240px;
+  overflow: hidden;
+  border: 1px solid rgba(18, 124, 114, 0.16);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow-soft);
+}
+
+.activity-card-large {
+  grid-row: span 2;
+}
+
+.activity-card img {
+  width: 100%;
+  height: 100%;
+  min-height: inherit;
+  display: block;
+  object-fit: cover;
+  transition: transform 240ms ease;
+}
+
+.activity-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 42%, rgba(14, 24, 34, 0.74));
+  pointer-events: none;
+}
+
+.activity-card div {
+  position: absolute;
+  inset: auto 18px 18px 18px;
+  z-index: 1;
+  display: grid;
+  gap: 8px;
+}
+
+.activity-card span {
+  width: fit-content;
+  border: 1px solid rgba(255, 255, 255, 0.34);
+  border-radius: 999px;
+  padding: 7px 10px;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.16);
+  font-size: 0.78rem;
+  font-weight: 850;
+  backdrop-filter: blur(12px);
+}
+
+.activity-card h3 {
+  max-width: 430px;
+  color: #ffffff;
+  font-size: clamp(1.2rem, 2vw, 1.7rem);
+  line-height: 1.15;
+}
+
+.activity-card:hover img {
+  transform: scale(1.035);
+}
+
+.safety {
+  display: grid;
+  grid-template-columns: 1fr 0.9fr;
+  gap: 48px;
+  align-items: start;
+  border-block: 1px solid var(--line);
+}
+
+.safety-points {
+  display: grid;
+  gap: 14px;
+}
+
+.safety-points p {
+  border-left: 4px solid var(--accent);
+  padding: 12px 0 12px 18px;
+  background: linear-gradient(90deg, rgba(242, 111, 94, 0.12), transparent);
+}
+
+.trust-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-top: 6px;
+  color: var(--brand-dark);
+  font-size: 0.9rem;
+  font-weight: 800;
+}
+
 .contact {
   display: grid;
   justify-items: start;
@@ -617,9 +719,21 @@ h3 {
   }
 
   .intro,
+  .safety,
   .feature-grid,
+  .activity-grid,
   .steps {
     grid-template-columns: 1fr;
+  }
+
+  .activity-grid {
+    grid-template-rows: none;
+  }
+
+  .activity-card,
+  .activity-card-large {
+    grid-row: auto;
+    min-height: 320px;
   }
 
   .feature-card,
@@ -650,8 +764,14 @@ h3 {
   .hero-panel,
   .hero-visual,
   .feature-card,
+  .activity-card,
   .step {
     padding: 18px;
+  }
+
+  .activity-card {
+    padding: 0;
+    min-height: 280px;
   }
 
   .hero-visual {
@@ -685,4 +805,138 @@ h3 {
     align-items: flex-start;
     flex-direction: column;
   }
+}
+
+/* Contact email guidance modal */
+.no-scroll {
+  overflow: hidden;
+}
+
+.contact-modal[hidden] {
+  display: none;
+}
+
+.contact-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+}
+
+.contact-modal-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(23, 32, 42, 0.55);
+  backdrop-filter: blur(4px);
+}
+
+.contact-modal-card {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  justify-items: center;
+  gap: 14px;
+  width: min(420px, 100%);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 34px 28px 28px;
+  text-align: center;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  animation: contact-pop 180ms ease;
+}
+
+@keyframes contact-pop {
+  from {
+    transform: translateY(8px) scale(0.98);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+.contact-modal-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--muted);
+  font-size: 1.3rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.contact-modal-close:hover {
+  color: var(--ink);
+}
+
+.contact-modal-icon {
+  display: inline-flex;
+  width: 52px;
+  height: 52px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: var(--brand-dark);
+  background: var(--brand-light);
+}
+
+.contact-modal-card h2 {
+  font-size: 1.5rem;
+}
+
+.contact-modal-card p {
+  max-width: 32ch;
+  color: var(--muted);
+  font-size: 0.98rem;
+  line-height: 1.6;
+}
+
+.contact-email-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 8px 8px 8px 14px;
+  background: var(--surface-soft);
+}
+
+.contact-email {
+  flex: 1;
+  text-align: left;
+  color: var(--ink-soft);
+  font-weight: 700;
+  word-break: break-all;
+}
+
+.contact-copy {
+  flex-shrink: 0;
+  min-height: 38px;
+  border: 1px solid rgba(18, 124, 114, 0.3);
+  border-radius: var(--radius);
+  padding: 0 14px;
+  color: var(--brand-dark);
+  background: #ffffff;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.contact-copy.is-copied {
+  color: #ffffff;
+  border-color: transparent;
+  background: var(--brand);
+}
+
+.contact-mail-btn {
+  width: 100%;
 }
