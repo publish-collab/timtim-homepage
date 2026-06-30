@@ -148,6 +148,21 @@ img {
   display: block;
 }
 
+.logo-mark-image {
+  width: 40px;
+  height: 40px;
+  border: 0;
+  background: transparent;
+  box-shadow: 0 16px 36px rgba(var(--brand-pink-rgb), 0.24);
+}
+
+.logo-mark-image img {
+  display: block;
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
 .nav-links {
   display: flex;
   align-items: center;
