@@ -16,7 +16,6 @@ navLinks?.addEventListener("click", (event) => {
   }
 });
 
-// Contact email guidance modal
 const CONTACT_EMAIL = "hello@timtim.example";
 const contactModal = document.getElementById("contact-modal");
 const contactTriggers = document.querySelectorAll("[data-contact-trigger]");
@@ -42,7 +41,6 @@ function closeContact() {
 
 contactTriggers.forEach((trigger) => {
   trigger.addEventListener("click", (event) => {
-    // Progressive enhancement: only hijack the click when the modal exists
     if (!contactModal) return;
     event.preventDefault();
     openContact();
@@ -76,6 +74,7 @@ copyButton?.addEventListener("click", async () => {
       selection.removeAllRanges();
     }
   }
+
   copyButton.textContent = "Đã sao chép!";
   copyButton.classList.add("is-copied");
   setTimeout(() => {
