@@ -136,8 +136,8 @@ img {
 .logo-wordmark {
   display: block;
   width: auto;
-  height: 40px;
-  max-width: 168px;
+  height: 46px;
+  max-width: 184px;
   object-fit: contain;
 }
 
@@ -1540,8 +1540,8 @@ h3 {
   }
 
   .logo-wordmark {
-    height: 34px;
-    max-width: 146px;
+    height: 38px;
+    max-width: 156px;
   }
 
   h1 {
