@@ -576,7 +576,7 @@ h3 {
   height: 100%;
   display: block;
   object-fit: cover;
-  object-position: 56% 44%;
+  object-position: center 35%;
 }
 
 .profile-card::after {
