@@ -304,12 +304,20 @@ img {
 }
 
 h1 {
-  max-width: 900px;
+  max-width: 980px;
   color: var(--ink);
-  font-size: clamp(3.3rem, 4.9vw, 5.85rem);
-  line-height: 1.05;
-  font-weight: 850;
+  font-size: clamp(3.25rem, 4.65vw, 5.55rem);
+  line-height: 1.02;
+  font-weight: 820;
   text-shadow: 0 20px 70px rgba(var(--brand-pink-rgb), 0.14);
+}
+
+.hero-headline {
+  text-wrap: balance;
+}
+
+.hero-headline span {
+  display: block;
 }
 
 h2 {
@@ -1013,9 +1021,9 @@ h3 {
   }
 
   h1 {
-    max-width: 860px;
-    font-size: clamp(3rem, 8vw, 5.2rem);
-    line-height: 1.06;
+    max-width: 900px;
+    font-size: clamp(2.95rem, 7.6vw, 5rem);
+    line-height: 1.04;
   }
 
   .hero-actions {
@@ -1095,8 +1103,20 @@ h3 {
   }
 
   h1 {
-    font-size: 2.72rem;
+    font-size: 2.62rem;
     line-height: 1.08;
+  }
+
+  .hero-headline span {
+    display: inline;
+  }
+
+  .hero-headline span::after {
+    content: " ";
+  }
+
+  .hero-headline span:last-child::after {
+    content: "";
   }
 
   h2 {
