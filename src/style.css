@@ -991,26 +991,14 @@ h3 {
   isolation: isolate;
 }
 
-.intro-splash-visual::before {
-  content: "";
-  position: absolute;
-  inset: 8% 5% 10%;
-  z-index: -1;
-  border-radius: 42px;
-  background:
-    radial-gradient(circle at 48% 36%, rgba(var(--brand-pink-rgb), 0.22), transparent 16rem),
-    linear-gradient(135deg, rgba(255, 241, 245, 0.92), rgba(255, 232, 234, 0.56));
-  filter: blur(2px);
-}
-
 .intro-hand-mockup {
-  width: min(540px, 100%);
+  width: min(520px, 100%);
   height: auto;
   display: block;
   object-fit: contain;
   filter:
-    drop-shadow(0 34px 76px rgba(var(--ink-rgb), 0.16))
-    drop-shadow(0 0 42px rgba(var(--brand-pink-rgb), 0.16));
+    drop-shadow(0 28px 54px rgba(var(--ink-rgb), 0.12))
+    drop-shadow(0 0 32px rgba(var(--brand-pink-rgb), 0.14));
 }
 
 .section-heading {
