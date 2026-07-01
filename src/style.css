@@ -144,10 +144,6 @@ img {
     0 18px 42px rgba(var(--brand-pink-rgb), 0.28);
 }
 
-.logo-mark svg {
-  display: block;
-}
-
 .logo-mark-image {
   width: 40px;
   height: 40px;
