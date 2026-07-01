@@ -129,6 +129,18 @@ img {
   font-weight: 900;
 }
 
+.site-header .logo {
+  gap: 0;
+}
+
+.logo-wordmark {
+  display: block;
+  width: auto;
+  height: 40px;
+  max-width: 168px;
+  object-fit: contain;
+}
+
 .logo-mark {
   display: inline-flex;
   width: 42px;
@@ -1525,6 +1537,11 @@ h3 {
   .site-header .logo-mark-image img {
     width: 38px;
     height: 38px;
+  }
+
+  .logo-wordmark {
+    height: 34px;
+    max-width: 146px;
   }
 
   h1 {
