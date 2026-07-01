@@ -1237,6 +1237,267 @@ h3 {
   max-width: 760px;
 }
 
+.download-section {
+  padding-top: 104px;
+}
+
+.download-panel {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(420px, 1.05fr);
+  gap: clamp(38px, 5vw, 76px);
+  overflow: hidden;
+  border: 1px solid rgba(var(--brand-pink-rgb), 0.18);
+  border-radius: 28px;
+  padding: clamp(32px, 5vw, 64px);
+  background:
+    radial-gradient(circle at 82% 16%, rgba(var(--brand-red-rgb), 0.2), transparent 24rem),
+    radial-gradient(circle at 14% 88%, rgba(var(--brand-pink-rgb), 0.18), transparent 28rem),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 241, 245, 0.62)),
+    var(--soft-pink);
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.74) inset,
+    var(--shadow),
+    0 0 86px rgba(var(--brand-pink-rgb), 0.11);
+}
+
+.download-panel::before {
+  content: "";
+  position: absolute;
+  right: -8rem;
+  bottom: -10rem;
+  width: 28rem;
+  height: 28rem;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(var(--brand-pink-rgb), 0.2), transparent 68%);
+  pointer-events: none;
+}
+
+.download-copy-block {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  align-content: center;
+  gap: 18px;
+}
+
+.download-copy-block h2 {
+  max-width: 760px;
+}
+
+.download-copy-block > p:not(.section-eyebrow) {
+  max-width: 62ch;
+}
+
+.download-cta-grid {
+  display: grid;
+  grid-template-columns: auto minmax(220px, 1fr);
+  gap: 18px;
+  align-items: stretch;
+  margin-top: 12px;
+}
+
+.qr-card {
+  display: grid;
+  gap: 10px;
+  width: 176px;
+  border: 1px solid rgba(var(--brand-pink-rgb), 0.14);
+  border-radius: 22px;
+  padding: 14px;
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: var(--shadow-soft);
+}
+
+.qr-card p {
+  color: var(--muted);
+  font-size: 0.74rem;
+  font-weight: 720;
+  line-height: 1.35;
+}
+
+.qr-placeholder {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 5px;
+  aspect-ratio: 1;
+  border-radius: 14px;
+  padding: 12px;
+  background:
+    linear-gradient(90deg, var(--ink) 16%, transparent 16% 32%, var(--ink) 32% 48%, transparent 48% 64%, var(--ink) 64% 80%, transparent 80%),
+    linear-gradient(0deg, rgba(var(--brand-pink-rgb), 0.18), rgba(var(--brand-red-rgb), 0.12)),
+    var(--white);
+  background-size: 100% 18%, 100% 100%, 100% 100%;
+  background-position: 0 12%, 0 0, 0 0;
+  background-repeat: repeat-y, no-repeat, no-repeat;
+}
+
+.qr-placeholder span {
+  border-radius: 5px;
+  background: var(--brand-gradient);
+}
+
+.qr-placeholder span:nth-child(2) {
+  grid-column: 4 / 6;
+  grid-row: 2 / 4;
+}
+
+.qr-placeholder span:nth-child(3) {
+  grid-column: 2 / 4;
+  grid-row: 4 / 6;
+}
+
+.qr-placeholder span:nth-child(4) {
+  grid-column: 5;
+  grid-row: 5;
+}
+
+.download-actions-cta {
+  align-content: start;
+  flex-direction: column;
+}
+
+.download-actions-cta .store-button {
+  width: fit-content;
+  min-width: 218px;
+}
+
+.download-phone-stage {
+  position: relative;
+  z-index: 1;
+  min-height: 500px;
+}
+
+.download-phone {
+  position: absolute;
+  border-radius: 42px;
+  padding: 11px;
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.96), rgba(255, 232, 234, 0.66)),
+    var(--white);
+  box-shadow:
+    0 34px 88px rgba(var(--ink-rgb), 0.18),
+    0 0 72px rgba(var(--brand-pink-rgb), 0.16);
+}
+
+.download-phone::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 22px;
+  z-index: 2;
+  width: 76px;
+  height: 22px;
+  transform: translateX(-50%);
+  border-radius: 999px;
+  background: var(--ink);
+}
+
+.download-phone-profile {
+  left: 3%;
+  bottom: 18px;
+  width: min(286px, 52%);
+  transform: rotate(-7deg);
+}
+
+.download-phone-splash {
+  right: 4%;
+  top: 8px;
+  width: min(250px, 45%);
+  transform: rotate(8deg);
+}
+
+.download-phone-screen {
+  display: grid;
+  overflow: hidden;
+  aspect-ratio: 9 / 18.8;
+  border: 8px solid var(--ink);
+  border-radius: 34px;
+}
+
+.profile-download-screen {
+  position: relative;
+  align-content: end;
+  padding: 18px;
+  color: var(--white);
+  background: var(--soft-coral);
+}
+
+.profile-download-screen > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 35%;
+}
+
+.profile-download-screen::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, transparent 34%, rgba(var(--ink-rgb), 0.82)),
+    linear-gradient(90deg, rgba(var(--brand-pink-rgb), 0.18), transparent 58%);
+}
+
+.profile-download-screen div {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 7px;
+}
+
+.profile-download-screen span {
+  width: fit-content;
+  border-radius: 999px;
+  padding: 6px 9px;
+  background: rgba(255, 255, 255, 0.18);
+  font-size: 0.72rem;
+  font-weight: 850;
+}
+
+.profile-download-screen strong {
+  color: var(--white);
+  font-size: 1.55rem;
+}
+
+.profile-download-screen p {
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 0.82rem;
+  line-height: 1.4;
+}
+
+.splash-download-screen {
+  place-items: center;
+  align-content: center;
+  gap: 12px;
+  padding: 28px;
+  color: var(--white);
+  background:
+    radial-gradient(circle at 32% 18%, rgba(255, 255, 255, 0.28), transparent 9rem),
+    radial-gradient(circle at 78% 86%, rgba(255, 255, 255, 0.18), transparent 8rem),
+    var(--brand-gradient);
+}
+
+.splash-download-screen img {
+  width: 84px;
+  height: 84px;
+  border-radius: 24px;
+  box-shadow: 0 22px 44px rgba(var(--ink-rgb), 0.2);
+}
+
+.splash-download-screen strong {
+  color: var(--white);
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.splash-download-screen span {
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 0.86rem;
+  font-weight: 760;
+}
+
 .footer {
   display: flex;
   min-height: 112px;
@@ -1546,6 +1807,14 @@ h3 {
     min-height: auto;
   }
 
+  .download-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .download-phone-stage {
+    min-height: 560px;
+  }
+
   .contact {
     align-items: flex-start;
     flex-direction: column;
@@ -1625,6 +1894,33 @@ h3 {
 
   .phone-mockup {
     width: min(292px, 86vw);
+  }
+
+  .download-panel {
+    padding: 30px 20px;
+  }
+
+  .download-cta-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .qr-card {
+    width: 100%;
+    max-width: 220px;
+  }
+
+  .download-phone-stage {
+    min-height: 490px;
+  }
+
+  .download-phone-profile {
+    left: 0;
+    width: min(242px, 64vw);
+  }
+
+  .download-phone-splash {
+    right: 0;
+    width: min(218px, 56vw);
   }
 
   .intro-splash-visual {
