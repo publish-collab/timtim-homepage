@@ -469,7 +469,7 @@ h3 {
 
 .app-hero-stage {
   display: grid;
-  min-height: 620px;
+  min-height: 650px;
   place-items: center;
   isolation: isolate;
 }
@@ -554,7 +554,7 @@ h3 {
 .profile-card {
   position: relative;
   overflow: hidden;
-  min-height: 350px;
+  min-height: 310px;
   border: 1px solid rgba(var(--brand-pink-rgb), 0.18);
   border-radius: 24px;
   background: var(--white);
@@ -582,7 +582,7 @@ h3 {
   inset: auto 15px 15px;
   z-index: 1;
   display: grid;
-  gap: 7px;
+  gap: 8px;
   color: var(--white);
 }
 
@@ -598,25 +598,13 @@ h3 {
 
 .profile-overlay h3 {
   color: var(--white);
-  font-size: 1.72rem;
+  font-size: 1.5rem;
 }
 
-.profile-details {
-  display: grid;
-  gap: 10px;
-  border: 1px solid rgba(var(--brand-pink-rgb), 0.12);
-  border-radius: 20px;
-  padding: 13px;
-  background: rgba(255, 255, 255, 0.82);
-  box-shadow: 0 16px 36px rgba(var(--ink-rgb), 0.08);
-  backdrop-filter: blur(14px);
-}
-
-.profile-details p {
-  color: var(--ink);
+.profile-overlay p {
+  color: rgba(255, 255, 255, 0.88);
   font-size: 0.82rem;
-  font-weight: 700;
-  line-height: 1.42;
+  line-height: 1.45;
 }
 
 .profile-tags {
@@ -626,24 +614,65 @@ h3 {
 }
 
 .profile-tags span {
-  border: 1px solid rgba(var(--brand-pink-rgb), 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 999px;
-  padding: 5px 9px;
-  color: var(--red);
-  background: rgba(var(--brand-pink-rgb), 0.08);
+  padding: 5px 8px;
+  color: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.14);
   font-size: 0.68rem;
-  font-weight: 900;
+  font-weight: 800;
+  backdrop-filter: blur(10px);
 }
 
-.profile-info {
+.conversation-preview {
   display: grid;
-  gap: 5px;
+  grid-template-columns: auto 1fr;
+  gap: 10px;
+  align-items: center;
+  border: 1px solid rgba(var(--brand-pink-rgb), 0.12);
+  border-radius: 18px;
+  padding: 11px;
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: 0 14px 32px rgba(var(--ink-rgb), 0.08);
+  backdrop-filter: blur(14px);
 }
 
-.profile-info span {
+.avatar-stack {
+  display: flex;
+  align-items: center;
+  width: 50px;
+}
+
+.avatar-stack span {
+  display: inline-flex;
+  width: 30px;
+  height: 30px;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--white);
+  border-radius: 50%;
+  color: var(--white);
+  background: var(--brand-gradient);
+  font-size: 0.78rem;
+  font-weight: 900;
+  box-shadow: 0 8px 18px rgba(var(--brand-pink-rgb), 0.18);
+}
+
+.avatar-stack span + span {
+  margin-left: -10px;
+  background: linear-gradient(135deg, #243247, #59687c);
+}
+
+.conversation-preview strong {
+  display: block;
+  color: var(--ink);
+  font-size: 0.82rem;
+}
+
+.conversation-preview p {
+  margin-top: 2px;
   color: var(--muted);
   font-size: 0.72rem;
-  font-weight: 760;
   line-height: 1.35;
 }
 
