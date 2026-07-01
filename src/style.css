@@ -511,10 +511,10 @@ h3 {
 
 .app-screen {
   display: grid;
-  grid-template-rows: auto 1fr auto;
-  gap: 14px;
+  grid-template-rows: auto minmax(0, 1fr) auto auto;
+  gap: 12px;
   height: 100%;
-  padding: 42px 16px 16px;
+  padding: 42px 15px 15px;
   background:
     radial-gradient(circle at 28% 10%, rgba(var(--brand-pink-rgb), 0.18), transparent 13rem),
     linear-gradient(180deg, var(--white), var(--soft-pink) 48%, var(--soft-coral));
@@ -523,10 +523,17 @@ h3 {
 .app-topbar {
   display: flex;
   align-items: center;
-  gap: 8px;
+  justify-content: space-between;
+  gap: 10px;
   color: var(--ink);
   font-size: 0.9rem;
   font-weight: 900;
+}
+
+.app-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .app-topbar img {
@@ -536,17 +543,18 @@ h3 {
 }
 
 .app-topbar strong {
-  margin-left: auto;
   border-radius: 999px;
-  padding: 6px 9px;
+  padding: 6px 10px;
   color: var(--white);
   background: var(--brand-gradient);
-  font-size: 0.8rem;
+  font-size: 0.72rem;
+  white-space: nowrap;
 }
 
 .profile-card {
   position: relative;
   overflow: hidden;
+  min-height: 310px;
   border: 1px solid rgba(var(--brand-pink-rgb), 0.18);
   border-radius: 24px;
   background: var(--white);
@@ -565,20 +573,20 @@ h3 {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(180deg, transparent 34%, rgba(36, 50, 71, 0.76)),
+    linear-gradient(180deg, rgba(36, 50, 71, 0.04), transparent 30%, rgba(36, 50, 71, 0.84)),
     linear-gradient(90deg, rgba(var(--brand-pink-rgb), 0.24), transparent 58%);
 }
 
 .profile-overlay {
   position: absolute;
-  inset: auto 16px 16px;
+  inset: auto 15px 15px;
   z-index: 1;
   display: grid;
-  gap: 7px;
+  gap: 8px;
   color: var(--white);
 }
 
-.profile-overlay span {
+.profile-overlay > span {
   width: fit-content;
   border-radius: 999px;
   padding: 6px 9px;
@@ -599,32 +607,107 @@ h3 {
   line-height: 1.45;
 }
 
+.profile-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.profile-tags span {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 999px;
+  padding: 5px 8px;
+  color: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.14);
+  font-size: 0.68rem;
+  font-weight: 800;
+  backdrop-filter: blur(10px);
+}
+
+.conversation-preview {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 10px;
+  align-items: center;
+  border: 1px solid rgba(var(--brand-pink-rgb), 0.12);
+  border-radius: 18px;
+  padding: 11px;
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: 0 14px 32px rgba(var(--ink-rgb), 0.08);
+  backdrop-filter: blur(14px);
+}
+
+.avatar-stack {
+  display: flex;
+  align-items: center;
+  width: 50px;
+}
+
+.avatar-stack span {
+  display: inline-flex;
+  width: 30px;
+  height: 30px;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--white);
+  border-radius: 50%;
+  color: var(--white);
+  background: var(--brand-gradient);
+  font-size: 0.78rem;
+  font-weight: 900;
+  box-shadow: 0 8px 18px rgba(var(--brand-pink-rgb), 0.18);
+}
+
+.avatar-stack span + span {
+  margin-left: -10px;
+  background: linear-gradient(135deg, #243247, #59687c);
+}
+
+.conversation-preview strong {
+  display: block;
+  color: var(--ink);
+  font-size: 0.82rem;
+}
+
+.conversation-preview p {
+  margin-top: 2px;
+  color: var(--muted);
+  font-size: 0.72rem;
+  line-height: 1.35;
+}
+
 .match-actions {
   display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
-  gap: 10px;
+  grid-template-columns: 0.88fr 0.92fr 1.04fr;
+  gap: 8px;
 }
 
 .match-actions span,
 .match-actions strong {
   display: inline-flex;
-  min-height: 44px;
+  min-height: 42px;
   align-items: center;
   justify-content: center;
   border-radius: 999px;
-  font-size: 0.82rem;
+  font-size: 0.76rem;
   font-weight: 900;
 }
 
-.match-actions span {
+.action-pass {
   color: var(--muted);
   background: rgba(255, 255, 255, 0.72);
 }
 
-.match-actions strong {
+.action-like {
   color: var(--white);
   background: var(--brand-gradient);
   box-shadow: 0 14px 32px rgba(var(--brand-pink-rgb), 0.24);
+}
+
+.action-chat {
+  color: var(--ink);
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 10px 22px rgba(var(--ink-rgb), 0.08);
 }
 
 .app-card,
@@ -697,6 +780,7 @@ h3 {
 .mini-screen {
   display: grid;
   gap: 8px;
+  align-content: start;
   min-height: 190px;
   border-radius: 16px;
   padding: 16px;
@@ -709,6 +793,17 @@ h3 {
   color: var(--red);
   font-size: 0.72rem;
   font-weight: 900;
+}
+
+.mini-chat-line {
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(var(--brand-pink-rgb), 0.14);
+}
+
+.mini-chat-line.short {
+  width: 68%;
+  background: rgba(var(--ink-rgb), 0.1);
 }
 
 .hero-image {
