@@ -542,16 +542,12 @@ h3 {
   font-weight: 900;
 }
 
-.app-brand {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.app-topbar img {
-  width: 28px;
+.app-brand-wordmark {
+  display: block;
+  width: auto;
   height: 28px;
-  border-radius: 8px;
+  max-width: 96px;
+  object-fit: contain;
 }
 
 .app-topbar strong {
