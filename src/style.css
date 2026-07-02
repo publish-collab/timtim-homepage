@@ -1364,138 +1364,19 @@ h3 {
 .download-phone-stage {
   position: relative;
   z-index: 1;
+  display: grid;
   min-height: 500px;
-}
-
-.download-phone {
-  position: absolute;
-  border-radius: 42px;
-  padding: 11px;
-  background:
-    linear-gradient(145deg, rgba(255, 255, 255, 0.96), rgba(255, 232, 234, 0.66)),
-    var(--white);
-  box-shadow:
-    0 34px 88px rgba(var(--ink-rgb), 0.18),
-    0 0 72px rgba(var(--brand-pink-rgb), 0.16);
-}
-
-.download-phone::before {
-  content: "";
-  position: absolute;
-  left: 50%;
-  top: 22px;
-  z-index: 2;
-  width: 76px;
-  height: 22px;
-  transform: translateX(-50%);
-  border-radius: 999px;
-  background: var(--ink);
-}
-
-.download-phone-profile {
-  left: 3%;
-  bottom: 18px;
-  width: min(286px, 52%);
-  transform: rotate(-7deg);
-}
-
-.download-phone-splash {
-  right: 4%;
-  top: 8px;
-  width: min(250px, 45%);
-  transform: rotate(8deg);
-}
-
-.download-phone-screen {
-  display: grid;
-  overflow: hidden;
-  aspect-ratio: 9 / 18.8;
-  border: 8px solid var(--ink);
-  border-radius: 34px;
-}
-
-.profile-download-screen {
-  position: relative;
-  align-content: end;
-  padding: 18px;
-  color: var(--white);
-  background: var(--soft-coral);
-}
-
-.profile-download-screen > img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 35%;
-}
-
-.profile-download-screen::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(180deg, transparent 34%, rgba(var(--ink-rgb), 0.82)),
-    linear-gradient(90deg, rgba(var(--brand-pink-rgb), 0.18), transparent 58%);
-}
-
-.profile-download-screen div {
-  position: relative;
-  z-index: 1;
-  display: grid;
-  gap: 7px;
-}
-
-.profile-download-screen span {
-  width: fit-content;
-  border-radius: 999px;
-  padding: 6px 9px;
-  background: rgba(255, 255, 255, 0.18);
-  font-size: 0.72rem;
-  font-weight: 850;
-}
-
-.profile-download-screen strong {
-  color: var(--white);
-  font-size: 1.55rem;
-}
-
-.profile-download-screen p {
-  color: rgba(255, 255, 255, 0.86);
-  font-size: 0.82rem;
-  line-height: 1.4;
-}
-
-.splash-download-screen {
   place-items: center;
-  align-content: center;
-  gap: 12px;
-  padding: 28px;
-  color: var(--white);
-  background:
-    radial-gradient(circle at 32% 18%, rgba(255, 255, 255, 0.28), transparent 9rem),
-    radial-gradient(circle at 78% 86%, rgba(255, 255, 255, 0.18), transparent 8rem),
-    var(--brand-gradient);
 }
 
-.splash-download-screen img {
-  width: 84px;
-  height: 84px;
-  border-radius: 24px;
-  box-shadow: 0 22px 44px rgba(var(--ink-rgb), 0.2);
-}
-
-.splash-download-screen strong {
-  color: var(--white);
-  font-size: 2rem;
-  line-height: 1;
-}
-
-.splash-download-screen span {
-  color: rgba(255, 255, 255, 0.82);
-  font-size: 0.86rem;
-  font-weight: 760;
+.download-visual-image {
+  width: min(540px, 100%);
+  height: auto;
+  display: block;
+  object-fit: contain;
+  filter:
+    drop-shadow(0 28px 64px rgba(var(--ink-rgb), 0.12))
+    drop-shadow(0 0 42px rgba(var(--brand-pink-rgb), 0.14));
 }
 
 .footer {
@@ -1812,7 +1693,7 @@ h3 {
   }
 
   .download-phone-stage {
-    min-height: 560px;
+    min-height: 480px;
   }
 
   .contact {
@@ -1910,17 +1791,11 @@ h3 {
   }
 
   .download-phone-stage {
-    min-height: 490px;
+    min-height: 360px;
   }
 
-  .download-phone-profile {
-    left: 0;
-    width: min(242px, 64vw);
-  }
-
-  .download-phone-splash {
-    right: 0;
-    width: min(218px, 56vw);
+  .download-visual-image {
+    width: min(360px, 96vw);
   }
 
   .intro-splash-visual {
