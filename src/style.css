@@ -336,7 +336,9 @@ h1 {
 }
 
 .hero-headline {
+  letter-spacing: -0.035em;
   text-wrap: balance;
+  word-spacing: normal;
 }
 
 .hero-headline span {
