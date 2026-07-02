@@ -308,21 +308,21 @@ img {
 
 .section-eyebrow {
   display: inline-flex;
-  width: fit-content;
   align-items: center;
   justify-content: center;
-  margin: 0 0 8px;
-  border: 1px solid #FFE8EA;
-  border-radius: 999px;
+  width: fit-content;
   padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 47, 125, 0.14);
+  background: rgba(255, 241, 245, 0.92);
   color: #FF2F7D;
-  background: #FFF1F5;
-  font-family: var(--font-body);
-  font-size: 0.74rem;
-  font-weight: 700;
-  letter-spacing: 0.03em;
+  font-family: var(--font-body, "Nunito Sans", sans-serif);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.035em;
   line-height: 1;
   text-transform: uppercase;
+  margin: 0 0 8px;
 }
 
 h1 {
