@@ -1053,6 +1053,16 @@ h3 {
   white-space: nowrap;
 }
 
+.features-heading {
+  max-width: 1040px;
+  font-size: clamp(2.45rem, 4.7vw, 4.35rem);
+  letter-spacing: -0.02em;
+}
+
+.features-heading .heading-line {
+  white-space: nowrap;
+}
+
 .intro-splash-visual {
   position: relative;
   display: grid;
@@ -1813,6 +1823,10 @@ h3 {
   }
 
   .heading-line {
+    white-space: normal;
+  }
+
+  .features-heading .heading-line {
     white-space: normal;
   }
 
