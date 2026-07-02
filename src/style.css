@@ -336,10 +336,12 @@ h1 {
 }
 
 .hero-headline {
-  letter-spacing: -0.035em;
-  line-height: 0.98;
+  letter-spacing: -0.055em;
+  line-height: 0.92;
+  text-align: left;
   text-wrap: balance;
-  word-spacing: normal;
+  word-spacing: -0.06em;
+  font-weight: 700;
 }
 
 .hero-headline span {
