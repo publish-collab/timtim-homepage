@@ -365,7 +365,7 @@ h3 {
 }
 
 .hero-copy,
-.intro p,
+.intro p:not(.section-eyebrow),
 .contact p,
 .feature-card p,
 .step p,
