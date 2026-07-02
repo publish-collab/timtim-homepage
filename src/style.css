@@ -369,7 +369,6 @@ h3 {
 .contact p,
 .feature-card p,
 .step p,
-.trust-list p,
 .contact-modal-card p {
   color: var(--muted);
   font-size: 1rem;
@@ -1109,8 +1108,7 @@ h3 {
 }
 
 .feature-card,
-.step,
-.trust-list article {
+.step {
   position: relative;
   display: grid;
   align-content: start;
@@ -1130,8 +1128,7 @@ h3 {
 }
 
 .feature-card::before,
-.step::before,
-.trust-list article::before {
+.step::before {
   content: "";
   position: absolute;
   inset: 0 0 auto;
@@ -1156,8 +1153,7 @@ h3 {
 }
 
 .feature-card:hover,
-.step:hover,
-.trust-list article:hover {
+.step:hover {
   transform: translateY(-5px);
   border-color: rgba(var(--brand-pink-rgb), 0.3);
   box-shadow:
@@ -1264,36 +1260,6 @@ h3 {
 
 .step {
   min-height: 260px;
-}
-
-.trust-panel {
-  display: grid;
-  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
-  gap: 48px;
-  align-items: start;
-  border: 1px solid rgba(var(--brand-pink-rgb), 0.2);
-  border-radius: 22px;
-  padding: 52px;
-  background:
-    radial-gradient(circle at 18% 14%, rgba(var(--brand-pink-rgb), 0.16), transparent 25rem),
-    linear-gradient(135deg, rgba(255, 255, 255, 0.86), rgba(255, 247, 242, 0.54)),
-    rgba(255, 255, 255, 0.58);
-  box-shadow: var(--shadow), 0 0 86px rgba(var(--brand-pink-rgb), 0.11);
-}
-
-.trust-copy {
-  display: grid;
-  gap: 18px;
-}
-
-.trust-list {
-  display: grid;
-  gap: 16px;
-}
-
-.trust-list article {
-  min-height: auto;
-  padding: 26px;
 }
 
 .contact {
@@ -1745,8 +1711,7 @@ h3 {
   .intro,
   .feature-grid,
   .activity-grid,
-  .steps,
-  .trust-panel {
+  .steps {
     grid-template-columns: 1fr;
   }
 
@@ -1951,9 +1916,7 @@ h3 {
   }
 
   .feature-card,
-  .step,
-  .trust-list article,
-  .trust-panel {
+  .step {
     padding: 24px;
   }
 
