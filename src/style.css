@@ -314,7 +314,7 @@ img {
   margin: 0 0 8px;
   border: 1px solid #FFE8EA;
   border-radius: 999px;
-  padding: 8px 12px;
+  padding: 8px 14px;
   color: #FF2F7D;
   background: #FFF1F5;
   font-family: var(--font-body);
@@ -323,11 +323,6 @@ img {
   letter-spacing: 0.03em;
   line-height: 1;
   text-transform: uppercase;
-}
-
-.hero-eyebrow {
-  padding-inline: 14px;
-  text-transform: none;
 }
 
 h1 {
