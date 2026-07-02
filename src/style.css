@@ -295,7 +295,7 @@ img {
   display: grid;
   grid-template-columns: minmax(480px, 0.78fr) minmax(580px, 1.22fr);
   align-items: center;
-  gap: clamp(64px, 6vw, 104px);
+  gap: clamp(80px, 7vw, 118px);
 }
 
 .hero-copy-block {
@@ -802,7 +802,7 @@ h3 {
 }
 
 .app-card-left {
-  left: clamp(52px, 6vw, 96px);
+  left: clamp(86px, 8vw, 132px);
   top: 96px;
 }
 
