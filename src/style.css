@@ -325,6 +325,11 @@ img {
   text-transform: uppercase;
 }
 
+.hero-eyebrow {
+  padding-inline: 14px;
+  text-transform: none;
+}
+
 h1 {
   max-width: 1040px;
   color: var(--ink);
@@ -487,6 +492,38 @@ h3 {
   background: var(--brand-gradient);
   box-shadow: 0 12px 28px rgba(var(--brand-pink-rgb), 0.2);
 }
+
+.hero .download-actions {
+  gap: 14px;
+}
+
+.hero .store-button {
+  min-width: 188px;
+  min-height: 68px;
+  gap: 14px;
+  padding: 11px 24px 11px 16px;
+  font-size: 1.06rem;
+}
+
+.hero .store-button small {
+  font-size: 0.78rem;
+}
+
+.hero .store-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+}
+
+.hero .store-icon svg {
+  width: 25px;
+  height: 25px;
+}
+
+.hero-copy-block .download-actions {
+  margin-top: 2px;
+}
+
 
 .download-note {
   color: var(--muted);
@@ -959,14 +996,19 @@ h3 {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 14px;
+  align-items: stretch;
 }
 
 .hero-proof span {
+  display: flex;
   min-height: 72px;
+  align-items: center;
+  justify-content: center;
   border: 1px solid rgba(255, 255, 255, 0.64);
   border-radius: var(--radius);
   padding: 18px;
   color: var(--ink-soft);
+  text-align: center;
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.82), rgba(255, 248, 244, 0.54)),
     rgba(255, 255, 255, 0.48);
