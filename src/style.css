@@ -293,16 +293,16 @@ img {
 .hero-inner {
   position: relative;
   display: grid;
-  grid-template-columns: minmax(0, 0.92fr) minmax(560px, 1.08fr);
+  grid-template-columns: minmax(480px, 0.78fr) minmax(580px, 1.22fr);
   align-items: center;
-  gap: clamp(36px, 4vw, 68px);
+  gap: clamp(64px, 6vw, 104px);
 }
 
 .hero-copy-block {
   display: grid;
   justify-items: start;
   gap: 24px;
-  max-width: 900px;
+  max-width: 560px;
   text-align: left;
 }
 
@@ -326,10 +326,10 @@ img {
 }
 
 h1 {
-  max-width: 1040px;
+  max-width: 640px;
   color: var(--ink);
   font-family: var(--font-heading);
-  font-size: clamp(3.1rem, 4.25vw, 5.05rem);
+  font-size: clamp(3rem, 4vw, 4.75rem);
   line-height: 1.08;
   font-weight: 700;
   text-shadow: 0 20px 70px rgba(var(--brand-pink-rgb), 0.14);
