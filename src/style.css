@@ -804,8 +804,26 @@ h3 {
 }
 
 .app-card-left {
-  left: clamp(86px, 8vw, 132px);
-  top: 96px;
+  left: clamp(70px, 8vw, 120px);
+  top: 44px;
+  width: min(188px, 24vw);
+  gap: 6px;
+  padding: 12px;
+  border-radius: 18px;
+}
+
+.app-card-left strong {
+  font-size: 0.9rem;
+}
+
+.app-card-left p {
+  font-size: 0.74rem;
+  line-height: 1.35;
+}
+
+.app-card-left .app-card-label {
+  padding: 5px 8px;
+  font-size: 0.64rem;
 }
 
 .app-card-right {
@@ -1684,8 +1702,8 @@ h3 {
   }
 
   .app-card-left {
-    left: 18px;
-    top: 70px;
+    left: clamp(18px, 12vw, 96px);
+    top: 36px;
   }
 
   .app-card-right {
@@ -1882,13 +1900,13 @@ h3 {
   }
 
   .app-card {
-    width: min(220px, 72vw);
-    padding: 14px;
+    width: min(190px, 68vw);
+    padding: 12px;
   }
 
   .app-card-left {
-    left: 0;
-    top: 38px;
+    left: 6px;
+    top: 26px;
   }
 
   .app-card-right {
