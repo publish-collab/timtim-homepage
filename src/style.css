@@ -804,11 +804,11 @@ h3 {
 }
 
 .app-card-left {
-  left: clamp(70px, 8vw, 120px);
-  top: 44px;
-  width: min(188px, 24vw);
-  gap: 6px;
-  padding: 12px;
+  left: clamp(24px, 4vw, 72px);
+  top: 188px;
+  width: min(178px, 23vw);
+  gap: 5px;
+  padding: 11px;
   border-radius: 18px;
 }
 
@@ -1702,8 +1702,8 @@ h3 {
   }
 
   .app-card-left {
-    left: clamp(18px, 12vw, 96px);
-    top: 36px;
+    left: clamp(10px, 8vw, 70px);
+    top: 180px;
   }
 
   .app-card-right {
@@ -1905,8 +1905,7 @@ h3 {
   }
 
   .app-card-left {
-    left: 6px;
-    top: 26px;
+    display: none;
   }
 
   .app-card-right {
