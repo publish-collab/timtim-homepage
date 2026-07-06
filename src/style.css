@@ -804,7 +804,7 @@ h3 {
 }
 
 .app-card-left {
-  left: clamp(24px, 4vw, 72px);
+  left: clamp(64px, 7vw, 112px);
   top: 188px;
   width: min(178px, 23vw);
   gap: 5px;
@@ -1702,7 +1702,7 @@ h3 {
   }
 
   .app-card-left {
-    left: clamp(10px, 8vw, 70px);
+    left: clamp(44px, 10vw, 100px);
     top: 180px;
   }
 
