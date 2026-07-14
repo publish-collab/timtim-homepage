@@ -47,6 +47,10 @@ html {
   font-family: var(--font-body);
 }
 
+section[id] {
+  scroll-margin-top: 78px;
+}
+
 body {
   margin: 0;
   min-width: 320px;
