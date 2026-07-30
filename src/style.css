@@ -1362,9 +1362,9 @@ h3 {
 
 .steps-section {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(360px, 0.48fr);
+  grid-template-columns: minmax(0, 1fr) minmax(400px, 0.55fr);
   align-items: center;
-  gap: clamp(48px, 6vw, 96px);
+  gap: clamp(48px, 5vw, 72px);
 }
 
 .steps-content {
@@ -1378,7 +1378,7 @@ h3 {
 }
 
 .steps-heading h2 {
-  font-size: clamp(2.6rem, 4.6vw, 4.15rem);
+  font-size: clamp(2.6rem, 4.2vw, 3.9rem);
 }
 
 .steps {
@@ -1407,43 +1407,49 @@ h3 {
 .steps-phone-stage {
   position: relative;
   display: grid;
-  min-height: 760px;
+  min-height: 860px;
   place-items: center;
 }
 
 .steps-phone-preview {
   position: relative;
   display: grid;
-  width: min(390px, 100%);
+  width: min(440px, 100%);
   justify-items: center;
-  gap: 20px;
+  gap: 22px;
   margin: 0;
   overflow: hidden;
   border: 1px solid rgba(var(--brand-pink-rgb), 0.2);
-  border-radius: 36px;
-  padding: 24px 20px 30px;
+  border-radius: 44px;
+  padding: 28px 18px 36px;
   background:
-    linear-gradient(160deg, rgba(255, 255, 255, 0.92), rgba(255, 235, 238, 0.76)),
+    radial-gradient(circle at 50% 58%, rgba(255, 255, 255, 0.98), rgba(255, 236, 241, 0.68) 52%, transparent 76%),
+    linear-gradient(160deg, rgba(255, 255, 255, 0.96), rgba(255, 230, 235, 0.8)),
     var(--soft-pink);
   box-shadow:
     0 1px 0 rgba(255, 255, 255, 0.94) inset,
-    0 28px 82px rgba(var(--ink-rgb), 0.12),
-    0 0 70px rgba(var(--brand-pink-rgb), 0.13);
+    0 34px 100px rgba(var(--ink-rgb), 0.13),
+    0 0 110px rgba(var(--brand-pink-rgb), 0.19);
   isolation: isolate;
 }
 
 .steps-phone-preview::before {
   content: "";
   position: absolute;
+  left: 50%;
+  top: 52%;
   z-index: -1;
-  right: -92px;
-  bottom: 90px;
-  width: 330px;
+  width: 500px;
   aspect-ratio: 1;
+  transform: translate(-50%, -43%);
+  border: 1px solid rgba(255, 255, 255, 0.76);
   border-radius: 50%;
   background:
-    radial-gradient(circle, rgba(var(--brand-pink-rgb), 0.25), rgba(var(--brand-red-rgb), 0.09) 48%, transparent 70%);
-  filter: blur(12px);
+    radial-gradient(circle, rgba(255, 255, 255, 0.7) 0 34%, rgba(var(--brand-pink-rgb), 0.15) 53%, transparent 72%);
+  box-shadow:
+    0 0 0 34px rgba(255, 255, 255, 0.12),
+    0 0 0 68px rgba(var(--brand-pink-rgb), 0.035),
+    0 0 120px rgba(var(--brand-pink-rgb), 0.24);
 }
 
 .steps-phone-preview::after {
@@ -1453,9 +1459,12 @@ h3 {
   z-index: -1;
   pointer-events: none;
   background:
-    radial-gradient(circle at 12% 14%, rgba(255, 255, 255, 0.96) 0 3px, transparent 4px),
-    radial-gradient(circle at 89% 22%, rgba(var(--brand-pink-rgb), 0.28) 0 2px, transparent 3px),
-    radial-gradient(circle at 9% 78%, rgba(var(--brand-red-rgb), 0.2) 0 2px, transparent 3px);
+    radial-gradient(circle at 13% 15%, rgba(255, 255, 255, 0.98) 0 3px, transparent 4px),
+    radial-gradient(circle at 88% 19%, rgba(var(--brand-pink-rgb), 0.38) 0 2px, transparent 3px),
+    radial-gradient(circle at 92% 35%, rgba(255, 255, 255, 0.9) 0 3px, transparent 4px),
+    radial-gradient(circle at 84% 64%, rgba(var(--brand-red-rgb), 0.18) 0 2px, transparent 3px),
+    radial-gradient(circle at 10% 79%, rgba(var(--brand-red-rgb), 0.22) 0 2px, transparent 3px),
+    radial-gradient(circle at 17% 88%, rgba(255, 255, 255, 0.82) 0 2px, transparent 3px);
 }
 
 .steps-phone-caption {
@@ -1482,10 +1491,10 @@ h3 {
 }
 
 .steps-phone-stage .steps-phone-mockup {
-  width: min(320px, 100%);
+  width: min(370px, 100%);
   box-shadow:
-    0 34px 90px rgba(var(--ink-rgb), 0.22),
-    0 0 72px rgba(var(--brand-pink-rgb), 0.2);
+    0 40px 110px rgba(var(--ink-rgb), 0.24),
+    0 0 96px rgba(var(--brand-pink-rgb), 0.24);
 }
 
 .steps-phone-mockup .phone-frame {
@@ -1541,10 +1550,10 @@ h3 {
 }
 
 .steps-app-profile {
-  display: grid;
+  position: relative;
+  display: block;
   min-height: 0;
   overflow: hidden;
-  grid-template-rows: 160px minmax(0, 1fr);
   border: 1px solid rgba(var(--brand-pink-rgb), 0.16);
   border-radius: 22px;
   background: rgba(255, 255, 255, 0.94);
@@ -1554,8 +1563,8 @@ h3 {
 }
 
 .steps-profile-photo {
-  position: relative;
-  min-height: 0;
+  position: absolute;
+  inset: 0;
   overflow: hidden;
 }
 
@@ -1563,7 +1572,9 @@ h3 {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, transparent 48%, rgba(var(--ink-rgb), 0.34));
+  background:
+    linear-gradient(180deg, rgba(var(--ink-rgb), 0.02) 18%, transparent 40%, rgba(var(--ink-rgb), 0.82) 100%),
+    linear-gradient(90deg, rgba(var(--brand-pink-rgb), 0.14), transparent 58%);
 }
 
 .steps-profile-photo img {
@@ -1571,13 +1582,15 @@ h3 {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 72% 44%;
+  object-position: 80% 40%;
+  transform: scale(1.18);
+  transform-origin: 80% 38%;
 }
 
 .steps-profile-photo > span {
   position: absolute;
   left: 10px;
-  bottom: 10px;
+  top: 10px;
   z-index: 1;
   border: 1px solid rgba(255, 255, 255, 0.4);
   border-radius: 999px;
@@ -1590,17 +1603,21 @@ h3 {
 }
 
 .steps-profile-copy {
+  position: absolute;
+  inset: auto 0 0;
+  z-index: 2;
   display: grid;
-  align-content: space-between;
+  align-content: end;
   gap: 7px;
-  min-height: 0;
-  padding: 10px 11px 11px;
+  padding: 38px 12px 12px;
+  background: linear-gradient(180deg, transparent, rgba(var(--ink-rgb), 0.16));
 }
 
 .steps-profile-copy h3 {
-  color: var(--ink);
+  color: var(--white);
   font-size: 1.12rem;
   line-height: 1.1;
+  text-shadow: 0 5px 18px rgba(var(--ink-rgb), 0.34);
 }
 
 .steps-profile-location {
@@ -1608,7 +1625,7 @@ h3 {
   align-items: center;
   gap: 4px;
   margin-top: 3px;
-  color: var(--muted);
+  color: rgba(255, 255, 255, 0.86);
   font-size: 0.63rem;
   font-weight: 700;
   line-height: 1.25;
@@ -1618,14 +1635,14 @@ h3 {
   width: 12px;
   height: 12px;
   flex: 0 0 auto;
-  stroke: var(--hot);
+  stroke: rgba(255, 255, 255, 0.92);
   stroke-width: 1.9;
   stroke-linecap: round;
   stroke-linejoin: round;
 }
 
 .steps-profile-bio {
-  color: var(--ink);
+  color: rgba(255, 255, 255, 0.92);
   font-size: 0.67rem;
   line-height: 1.38;
 }
@@ -1637,14 +1654,15 @@ h3 {
 }
 
 .steps-sport-chips span {
-  border: 1px solid rgba(var(--brand-pink-rgb), 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.28);
   border-radius: 999px;
   padding: 4px 7px;
-  color: var(--red);
-  background: rgba(var(--brand-pink-rgb), 0.08);
+  color: var(--white);
+  background: rgba(255, 255, 255, 0.16);
   font-size: 0.56rem;
   font-weight: 800;
   line-height: 1.1;
+  backdrop-filter: blur(10px);
 }
 
 .steps-availability-card {
