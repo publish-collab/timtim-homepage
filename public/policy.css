@@ -311,6 +311,13 @@ li {
   font-weight: 800;
 }
 
+.policy-footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 10px 22px;
+}
+
 a:focus-visible {
   border-radius: 8px;
   outline: 3px solid rgba(255, 47, 125, 0.35);
@@ -355,6 +362,10 @@ a:focus-visible {
     align-items: flex-start;
     justify-content: center;
     padding: 26px 0;
+  }
+
+  .policy-footer-links {
+    justify-content: flex-start;
   }
 }
 
